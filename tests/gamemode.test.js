@@ -50,4 +50,16 @@ describe('GameMode Tests', function () {
             }
         });
     });
+
+    it('External GameMode Loading', function (done) {
+        var gm = new GameMode({
+            src: __dirname + "/../examples/example_gm/example_gm.json",
+            path: __dirname + "/../examples/example_gm/",
+            onLoad: function () {
+                expect(this.name).to.equal("Example Game Mode");
+
+                done();
+            }
+        });
+    });
 });
