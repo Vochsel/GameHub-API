@@ -1,0 +1,12 @@
+{
+    "name": "Example Game Mode",
+    "version": "0.1.0",
+    "stages": [
+        {
+            "src": "stages/example_stage_1/meta.json"
+        },
+        {
+            "src": "stages/example_stage_2/meta.json"
+        }
+    ]
+}

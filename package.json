@@ -1,0 +1,55 @@
+{
+    "name": "gh-api",
+    "version": "0.0.1",
+    "description": "Core API for creating GameHub enabled Games.",
+    "keywords": [
+        "Game",
+        "Hub",
+        "gh-api",
+        "raspberry",
+        "pi"
+    ],
+    "homepage": "https://github.com/Vochsel/GameHub-API",
+    "bugs": {
+        "url": "https://github.com/vochsel/GameHub-API/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vochse/GameHub-API.git"
+    },
+    "author": "Ben Skinner <benjamin.skinner96@gmail.com> (http://vochsel.com)",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "lib"
+    ],
+    "scripts": {
+        "test": "mocha tests/*.test.js"
+    },
+    "scrispts": {
+        "test": "eslint . && nyc --reporter=html --reporter=text mocha test/*.test.js",
+        "integration": "eslint . && mocha test/*.integration.js",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "safe-eval": "0.3.0"
+    },
+    "devDependencies": {
+        "benchmark": "~2.1.2",
+        "eslint": "~4.7.0",
+        "eslint-config-standard": "~10.2.0",
+        "eslint-plugin-import": "~2.7.0",
+        "eslint-plugin-node": "~5.1.0",
+        "eslint-plugin-promise": "~3.5.0",
+        "eslint-plugin-standard": "~3.0.0",
+        "mocha": "3.5.3",
+        "chai": "4.1.2"
+    },
+    "directories": {
+        "doc": "doc",
+        "example": "examples",
+        "lib": "lib",
+        "test": "test"
+    },
+    "license": "ISC"
+}

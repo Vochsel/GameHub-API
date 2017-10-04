@@ -56,7 +56,10 @@ The **State** object is at the core of every screen seen by players and handles 
 const GameHub = require('gh-api');
 
 var demoState = new GameHub.State({
-    name: "Demo State"
+    name: "Demo State",
+    model: {},
+    views: {},
+    controllers: {}
 });
 ```
 
