@@ -1,3 +1,8 @@
 {
-    "name": "Example State 1"
+    "name": "Example State 1",
+    "views": [
+        {
+            "src": "views/example.html"
+        }
+    ]
 }
