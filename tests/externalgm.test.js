@@ -7,10 +7,13 @@ describe('Create GameMode from external source', function () {
     it('Loaded external GM', function (done) {
         var gamemode = new GameMode({
             src: __dirname + "/../examples/example_gm/example_gm.json",
-            path: __dirname + "/../examples/example_gm/",
             onLoad: function () {
                 expect(this.stages[0].name).to.equal("Example Stage 1");
                 expect(this.stages[1].name).to.equal("Example Stage 2");
+                expect(this.stages[0].states[0].name).to.equal("Example State 1");
+
+                expect(this.stages[0].states[0].views[0].data).to.equal("<h1>External View 1</h1>");
+                expect(this.stages[0].states[0].controllers[0].clientIsReady).be.a("function");
 
                 done();
             }

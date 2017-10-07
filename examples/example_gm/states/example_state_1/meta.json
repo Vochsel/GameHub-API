@@ -4,5 +4,10 @@
         {
             "src": "views/example.html"
         }
+    ],
+    "controllers": [
+        {
+            "src": "controllers/main.js"
+        }
     ]
 }

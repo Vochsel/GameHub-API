@@ -1,3 +1,8 @@
 {
-    "name": "Example Stage 1"
+    "name": "Example Stage 1",
+    "states": [
+        {
+            "src": "states/example_state_1/meta.json"
+        }
+    ]
 }
