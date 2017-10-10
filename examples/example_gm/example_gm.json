@@ -1,6 +1,12 @@
 {
     "name": "Example Game Mode",
     "version": "0.1.0",
+    "resources": [
+        {
+            "name": "testData",
+            "src": "resources/example_data.json"
+        }
+    ],
     "stages": [
         {
             "src": "stages/example_stage_1/meta.json"
