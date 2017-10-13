@@ -1,77 +1,81 @@
-// tests/api/test-state.js
-var chai = require('chai');
-var expect = chai.expect; // we are using the "expect" style of Chai
-var State = require('..').State;
+/*eslint-env mocha*/
 
-describe('State Tests', function () {
-    it('Inline State creation', function (done) {
-        var state = new State({
-            name: "Test State",
-            onLoad: function () {
-                expect(this.name).to.equal("Test State");
+/* External Dependencies */
+var chai = require("chai");
+var expect = chai.expect;
 
-                done();
-            }
-        });
-    });
+/* Internal Dependencies */
+var State = require("..").State;
 
-    it('Inline View Creation - Data', function (done) {
-        var state = new State({
-            views: [
-                {
-                    data: "Test view data"
-                }
-            ],
-            onLoad: function () {
-                expect(this.views[0].data).to.equal("Test view data");
+describe("State Tests", function () {
+	it("Inline State creation", function (done) {
+		return new State({
+			name: "Test State",
+			onLoad: function () {
+				expect(this.name).to.equal("Test State");
 
-                done();
-            }
-        });
-    });
+				done();
+			}
+		});
+	});
 
-    it('Inline View Creation - Defaults', function (done) {
-        var state = new State({
-            views: [
-                {
-                    name: "Test View"
-                }
-            ],
-            onLoad: function () {
-                expect(this.views[0].name).to.equal("Test View");
+	it("Inline View Creation - Data", function (done) {
+		return new State({
+			views: [
+				{
+					data: "Test view data"
+				}
+			],
+			onLoad: function () {
+				expect(this.views[0].data).to.equal("Test view data");
 
-                expect(this.views[0].type).to.equal("default");
-                expect(this.views[0].role).to.equal("default");
+				done();
+			}
+		});
+	});
 
-                done();
-            }
-        });
-    });
+	it("Inline View Creation - Defaults", function (done) {
+		return new State({
+			views: [
+				{
+					name: "Test View"
+				}
+			],
+			onLoad: function () {
+				expect(this.views[0].name).to.equal("Test View");
 
-    it('Inline View Creation - External', function (done) {
-        var state = new State({
-            views: [
-                {
-                    name: "Test View",
-                    src: __dirname + "/../examples/example_gm/states/example_state_1/views/example.html"
-                }
-            ],
-            onLoad: function () {
-                expect(this.views[0].data).to.equal("<h1>External View 1</h1>");
+				expect(this.views[0].type).to.equal("default");
+				expect(this.views[0].role).to.equal("default");
 
-                done();
-            }
-        });
-    });
+				done();
+			}
+		});
+	});
 
-    it('External View Loading', function (done) {
-        var state = new State({
-            src: __dirname + "/../examples/example_gm/states/example_state_1/meta.json",
-            onLoad: function () {
-                expect(this.name).to.equal("Example State 1");
+	it("Inline View Creation - External", function (done) {
+		return new State({
+			views: [
+				{
+					name: "Test View",
+					src: __dirname + "/../examples/example_gm/states/example_state_1/views/example.html"
+				}
+			],
+			onLoad: function () {
+				expect(this.views[0].data).to.equal("<h1>External View 1</h1>");
 
-                done();
-            }
-        });
-    });
+				done();
+			}
+		});
+	});
+
+	it("External View Loading", function (done) {
+		return new State({
+			src: __dirname + "/../examples/example_gm/states/example_state_1/meta.json",
+			onLoad: function () {
+				expect(this.name).to.equal("Example State 1");
+
+				done();
+			}
+		});
+	});
 });
