@@ -10,7 +10,7 @@ var Controller = require("..").Controller;
 describe("Controller Tests", function () {
 	it("Inline Controller Creation - Options", function (done) {
 		return new Controller({
-			clientIsReady: function(/*a_device, a_data*/) {
+			clientIsReady: function ( /*a_device, a_data*/ ) {
 				return true;
 			},
 			onLoad: function () {

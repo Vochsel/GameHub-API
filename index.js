@@ -6,16 +6,16 @@
 
 "use strict";
 
-var GameHub         = require("./lib/GameHub");
+var GameHub = require("./lib/GameHub");
 
-GameHub.Resource    = require("./lib/core/Resource");
+GameHub.Resource = require("./lib/core/Resource");
 
-GameHub.GameMode    = require("./lib/game/GameMode");
-GameHub.Stage       = require("./lib/game/Stage");
-GameHub.State       = require("./lib/game/State");
+GameHub.GameMode = require("./lib/game/GameMode");
+GameHub.Stage = require("./lib/game/Stage");
+GameHub.State = require("./lib/game/State");
 
-GameHub.View        = require("./lib/mvc/View");
-GameHub.Controller  = require("./lib/mvc/Controller");
+GameHub.View = require("./lib/mvc/View");
+GameHub.Controller = require("./lib/mvc/Controller");
 
 
 module.exports = GameHub;

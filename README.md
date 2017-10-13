@@ -21,6 +21,9 @@ For a full example of these concepts in context see [`/examples/example_gm/`](./
 
 The **GameMode** object defines the structure and properties of each GameMode. The GameMode will define the flow of each stage, and specify any required details.
 
+##### GameMode Events
+* Load
+
 ```js
 const GameHub = require('gh-api');
 
@@ -37,6 +40,9 @@ var gm = new GameHub.GameMode({
 
 The **Stage** object is a way to group certain states into replayable, seperable, game stages. 
 
+##### Stage Events
+* Load
+
 ```js
 const GameHub = require('gh-api');
 
@@ -52,6 +58,9 @@ var demoStage = new GameHub.Stage({
 
 The **State** object is at the core of every screen seen by players and handles the required MVC callbacks to handle game logic.
 
+##### State Events
+* Load
+
 ```js
 const GameHub = require('gh-api');
 
@@ -62,6 +71,16 @@ var demoState = new GameHub.State({
     controllers: {}
 });
 ```
+
+## Core Components
+
+### Device
+
+#### Device Events
+* Refresh
+* Reset
+
+### Resource
 
 ## Usage Examples
 
