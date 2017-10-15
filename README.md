@@ -23,6 +23,9 @@ The **GameMode** object defines the structure and properties of each GameMode. T
 
 ##### GameMode Events
 * Load
+* Enter
+* Exit
+
 
 ```js
 const GameHub = require('gh-api');
@@ -42,6 +45,8 @@ The **Stage** object is a way to group certain states into replayable, seperable
 
 ##### Stage Events
 * Load
+* Enter
+* Exit
 
 ```js
 const GameHub = require('gh-api');
@@ -60,6 +65,8 @@ The **State** object is at the core of every screen seen by players and handles 
 
 ##### State Events
 * Load
+* Enter
+* Exit
 
 ```js
 const GameHub = require('gh-api');
