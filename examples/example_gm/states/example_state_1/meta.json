@@ -2,7 +2,7 @@
     "name": "Example State 1",
     "views": [
         {
-            "src": "views/example.html"
+            "src": "states/example_state_1/views/example.html"
         }
     ],
     "controllers": [
