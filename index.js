@@ -9,6 +9,7 @@
 var GameHub = require("./lib/GameHub");
 
 GameHub.Resource = require("./lib/core/Resource");
+GameHub.Device = require("./lib/core/Device");
 
 GameHub.GameMode = require("./lib/game/GameMode");
 GameHub.Stage = require("./lib/game/Stage");
