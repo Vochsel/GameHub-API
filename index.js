@@ -18,5 +18,7 @@ GameHub.State = require("./lib/game/State");
 GameHub.View = require("./lib/mvc/View");
 GameHub.Controller = require("./lib/mvc/Controller");
 
+GameHub.Utils = require("./lib/utils/Utils");
+
 
 module.exports = GameHub;
