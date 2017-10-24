@@ -1,6 +1,10 @@
 {
     "name": "Example Game Mode",
     "version": "0.1.0",
+    "flow": [
+        { "stage" : "example_stage_1", "repeats": 2 },
+        { "stage" : "example_stage_2", "repeats": 3 }
+    ],
     "resources": [
         {
             "name": "testData",
