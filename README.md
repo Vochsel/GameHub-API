@@ -128,18 +128,27 @@ Resources require a name which is used to identify and retrieve from the GameMod
 ### Controller
 Each **State** can hold an array of **Controllers** which contain definitions of functions, accessible by **View** DOM inputs.
 
-Controller functions are passed a reference to the calling device and the associated data specified from DOM
+Controller functions are passed a reference to the calling device and the associated data specified from DOM. Most HTML Input fields are supported. Canvas' are sent aswell. 
+
+For custom data, the **data-value** property can be set on the associate DOM.
+
+Controller functions are specified by the **data-action** property.
 
 
 #### Examples
 
+```html
+<h2>Your Name</h2>
+<input type='text' data-id='clientName'/>
+<div class='button' data-action='funcA()' data-id='btnData' data-value='demo data!'>Button!</div>
+```
+
 ```js
 var demoController = new Controller({
     funcA: function(device, data) {
-        console.log("funcA has just been called!");
-    },
-    funcB: function(device, data) {
         console.log("funcB has just been called from Device UID: " + device.uid + "!");
+        console.log(data.btnData);      //This will print out 'demo data!'
+        console.log(data.clientName);   //This will print out text input
     },
 })
 ```
