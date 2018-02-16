@@ -1,6 +1,6 @@
 {
     "name": "gh-api",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Core API for creating GameHub enabled Games.",
     "keywords": [
         "Game",
