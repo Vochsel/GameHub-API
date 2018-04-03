@@ -56,6 +56,7 @@ describe("GameMode Tests", function () {
 	});
 
 	it("External GameMode Loading", function (done) {
+		console.log("hey")
 		return new GameMode({
 			src: __dirname + "/../examples/example_gm/example_gm.json",
 			onLoad: function () {
